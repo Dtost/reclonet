@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReClonet — Пользовательское соглашение и Политика конфиденциальности</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+    nav button.active {
+      background: #111;
+      color: #fff;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+    section { display: none; }
+    section.active { display: block; }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ReClonet — Правовая информация</h1>
+    <nav>
+      <button id="btn-terms" class="active">Пользовательское соглашение</button>
+      <button id="btn-privacy">Политика конфиденциальности</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="terms" class="active">
+      <h2>1. Общие положения</h2>
+      <p>Настоящее Пользовательское соглашение (далее — «Соглашение») регулирует отношения между Сервисом ReClonet и Пользователем при использовании сервиса.</p>
+
+      <h2>5. Оплата Заказа</h2>
+      <p>Сервис использует сторонние платёжные системы для приёма оплаты. Оплата Заказа осуществляется посредством электронного перевода. Подтверждением оплаты является успешное списание средств с платёжного средства Покупателя.</p>
+      <p>В Сервисе предусмотрено пополнение внутреннего баланса. Пополнение не является оплатой конкретной услуги, а лишь зачислением средств на счёт Пользователя. Возврат средств возможен только по усмотрению Администрации.</p>
+
+      <h2>6. Возврат Заказа</h2>
+      <p>Возврат средств осуществляется по усмотрению Администрации Сервиса. Каждый запрос рассматривается индивидуально. Решение Администрации является окончательным.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>1. Общие положения</h2>
+      <p>Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных Пользователей при использовании Сервиса ReClonet.</p>
+
+      <h2>2. Сбор и использование данных</h2>
+      <p>Сервис может собирать минимальный объём технической информации (например, IP-адрес, тип устройства, язык системы) исключительно для обеспечения корректной работы и улучшения качества обслуживания.</p>
+
+      <h2>3. Передача данных третьим лицам</h2>
+      <p>Персональные данные не передаются третьим лицам, за исключением случаев, предусмотренных законодательством или необходимых для работы платёжных систем.</p>
+
+      <h2>4. Безопасность данных</h2>
+      <p>Администрация предпринимает все разумные меры для защиты информации Пользователей от несанкционированного доступа и утечки.</p>
+
+      <h2>5. Изменения политики</h2>
+      <p>Сервис оставляет за собой право вносить изменения в настоящую Политику. Обновлённая версия публикуется по тому же адресу.</p>
+    </section>
+  </main>
+
+  <footer>
+    © ReClonet, 2025. Все права защищены.
+  </footer>
+
+  <script>
+    const btnTerms = document.getElementById('btn-terms');
+    const btnPrivacy = document.getElementById('btn-privacy');
+    const sectionTerms = document.getElementById('terms');
+    const sectionPrivacy = document.getElementById('privacy');
+
+    btnTerms.onclick = () => {
+      btnTerms.classList.add('active');
+      btnPrivacy.classList.remove('active');
+      sectionTerms.classList.add('active');
+      sectionPrivacy.classList.remove('active');
+    };
+
+    btnPrivacy.onclick = () => {
+      btnPrivacy.classList.add('active');
+      btnTerms.classList.remove('active');
+      sectionPrivacy.classList.add('active');
+      sectionTerms.classList.remove('active');
+    };
+  </script>
+</body>
+</html>
