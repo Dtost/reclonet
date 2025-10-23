@@ -51,8 +51,17 @@
       margin-top: 2rem;
       font-size: 1.3rem;
     }
-    section { display: none; }
-    section.active { display: block; }
+    section 
+    { 
+      display: none; 
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    section.active 
+      { 
+      display: block; 
+      opacity: 1;
+      }
     footer {
       text-align: center;
       padding: 1rem;
@@ -68,7 +77,7 @@
     <nav>
       <button id="btn-terms" class="active">Пользовательское соглашение</button>
       <button id="btn-privacy">Политика конфиденциальности</button>
-      <button id="btn-FAQ">Часто задаваемые вопросы</button>
+      <button id="btn-faq">Часто задаваемые вопросы</button>
     </nav>
   </header>
 
@@ -212,7 +221,7 @@
       <p>Если у вас есть вопросы о нашей Политике конфиденциальности, свяжитесь с нами через поддержку <a href="https://t.me/reclonetSup_bot">@reclonetSup_bot</a></p>
     </section>
     
-    <section id="FAQ">
+    <section id="faq">
       <h2>2. Часто задаваемые вопросы (FAQ)</h2>
     
       <h3>Что такое ReClonet?</h3>
@@ -285,10 +294,10 @@
   <script>
     const btnTerms = document.getElementById('btn-terms');
     const btnPrivacy = document.getElementById('btn-privacy');
-    const btnFAQ = document.getElementById('btn-FAQ');
+    const btnFAQ = document.getElementById('btn-faq');
     const sectionTerms = document.getElementById('terms');
     const sectionPrivacy = document.getElementById('privacy');
-    const sectionFAQ = document.getElementById('FAQ');
+    const sectionFAQ = document.getElementById('faq');
 
     btnTerms.onclick = () => {
       btnTerms.classList.add('active');
