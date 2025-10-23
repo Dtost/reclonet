@@ -293,15 +293,19 @@
     btnTerms.onclick = () => {
       btnTerms.classList.add('active');
       btnPrivacy.classList.remove('active');
+      btnFAQ.classList.remove('active');
       sectionTerms.classList.add('active');
       sectionPrivacy.classList.remove('active');
+      sectionFAQ.classList.remove('active');
     };
 
     btnPrivacy.onclick = () => {
       btnPrivacy.classList.add('active');
       btnTerms.classList.remove('active');
+      btnFAQ.classList.remove('active');
       sectionPrivacy.classList.add('active');
       sectionTerms.classList.remove('active');
+      sectionFAQ.classList.remove('active');
     };
     
     btnFAQ.onclick = () => {
