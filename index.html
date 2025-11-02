@@ -3,44 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReClonet — Дополнительная информация</title>
+  <title>ReClonet — Информация</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="description" content="ReClonet — инструмент для управления подключениями и подписками. Узнайте больше о сервисе, политике и FAQ." />
   <style>
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #111;
+      background: #0f0f0f;
+      color: #f0f0f0;
       line-height: 1.6;
+      transition: 0.3s;
     }
     header {
       text-align: center;
       padding: 2rem 1rem 1rem;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #222;
     }
     header h1 {
       margin: 0;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 600;
     }
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 1rem;
       gap: 1rem;
     }
     nav button {
       background: none;
-      border: none;
+      border: 1px solid #333;
       font-size: 1rem;
       cursor: pointer;
+      color: #f0f0f0;
       padding: 0.5rem 1rem;
-      border-radius: 6px;
+      border-radius: 8px;
       transition: 0.2s;
     }
-    nav button.active {
-      background: #111;
+    nav button.active, nav button:hover {
+      background: #3a7bff;
       color: #fff;
+      border-color: #3a7bff;
     }
     main {
       max-width: 900px;
@@ -51,23 +57,58 @@
       margin-top: 2rem;
       font-size: 1.3rem;
     }
-    section 
-    { 
+    section { 
       display: none; 
       opacity: 0;
       transition: opacity 0.2s ease-in-out;
     }
-    section.active 
-      { 
+    section.active { 
       display: block; 
       opacity: 1;
-      }
+    }
+    .bot-link {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .bot-card {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .bot-card h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    .bot-card p {
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    .bot-btn {
+      background: #3a7bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.2s;
+      display: inline-block;
+    }
+    .bot-btn:hover {
+      background: #5a95ff;
+      transform: translateY(-2px);
+    }
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #eee;
+      color: #777;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
@@ -75,14 +116,23 @@
   <header>
     <h1>ReClonet — Информация</h1>
     <nav>
-      <button id="btn-terms" class="active">Пользовательское соглашение</button>
+      <button id="btn-home" class="active">Главная</button>
+      <button id="btn-terms">Пользовательское соглашение</button>
       <button id="btn-privacy">Политика конфиденциальности</button>
-      <button id="btn-faq">Часто задаваемые вопросы</button>
+      <button id="btn-faq">FAQ</button>
     </nav>
   </header>
 
   <main>
-    <section id="terms" class="active">
+    <section id="home" class="active bot-link">
+      <div class="bot-card">
+        <h2>ReClonet Bot</h2>
+        <p>Ваш персональный помощник для управления подписками и подключениями. Безопасно, просто и удобно — всё под контролем.</p>
+        <a href="https://t.me/reclonet_bot" class="bot-btn">Открыть в Telegram</a>
+      </div>
+    </section>
+
+    <section id="terms">
       <p>Сервис ReClonet оказывает услуги, используя программное обеспечение и распределенную сеть серверов.</p>
       <h2>1. Общее положение</h2>
       <p>1.1. В данном Пользовательском соглашении (далее - Соглашение, Правила Сервиса, Правила Пользования, Договор) используются следующие термины:</p>
@@ -186,8 +236,7 @@
       
       <h2>13. Контактная информация</h2>
       <p>Бот поддержки - <a href="https://t.me/reclonetSup_bot">@reclonetSup_bot</a></p>
-      
-    </section>
+	  </section>
 
     <section id="privacy">
       <h2>1. Общие положения</h2>
@@ -220,7 +269,7 @@
       <p>Ваше дальнейшее использование нашего сервиса подтверждает ваше согласие с нашей обновленной Политикой конфиденциальности.</p>
       <p>Если у вас есть вопросы о нашей Политике конфиденциальности, свяжитесь с нами через поддержку <a href="https://t.me/reclonetSup_bot">@reclonetSup_bot</a></p>
     </section>
-    
+
     <section id="faq">
       <h2>Часто задаваемые вопросы (FAQ)</h2>
     
@@ -314,47 +363,28 @@
       <h3>Вы сотрудничаете с Telegram?</h3>
       <p>Нет. ReClonet — независимый сервис, использующий Telegram исключительно как удобный интерфейс для взаимодействия с пользователями.</p>
     </section>
-
   </main>
 
   <footer>
-    © ReClonet, 2025. Все права защищены.
+    <p>© ReClonet, 2025</p>
   </footer>
 
   <script>
-    const btnTerms = document.getElementById('btn-terms');
-    const btnPrivacy = document.getElementById('btn-privacy');
-    const btnFAQ = document.getElementById('btn-faq');
-    const sectionTerms = document.getElementById('terms');
-    const sectionPrivacy = document.getElementById('privacy');
-    const sectionFAQ = document.getElementById('faq');
+    const buttons = document.querySelectorAll('nav button');
+    const sections = document.querySelectorAll('main section');
 
-    btnTerms.onclick = () => {
-      btnTerms.classList.add('active');
-      btnPrivacy.classList.remove('active');
-      btnFAQ.classList.remove('active');
-      sectionTerms.classList.add('active');
-      sectionPrivacy.classList.remove('active');
-      sectionFAQ.classList.remove('active');
-    };
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        buttons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
 
-    btnPrivacy.onclick = () => {
-      btnPrivacy.classList.add('active');
-      btnTerms.classList.remove('active');
-      btnFAQ.classList.remove('active');
-      sectionPrivacy.classList.add('active');
-      sectionTerms.classList.remove('active');
-      sectionFAQ.classList.remove('active');
-    };
-    
-    btnFAQ.onclick = () => {
-      btnPrivacy.classList.remove('active');
-      btnTerms.classList.remove('active');
-      btnFAQ.classList.add('active');
-      sectionPrivacy.classList.remove('active');
-      sectionTerms.classList.remove('active');
-      sectionFAQ.classList.add('active');
-    };
+        const target = btn.id.replace('btn-', '');
+        sections.forEach((s) => {
+          s.classList.remove('active');
+          if (s.id === target) s.classList.add('active');
+        });
+      });
+    });
   </script>
 </body>
 </html>
