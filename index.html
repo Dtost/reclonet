@@ -366,10 +366,13 @@
   </main>
 
   <footer>
-    <p>© ReClonet, 2025</p>
+    <p>© ReClonet, <span id="year">2025</span></p>
   </footer>
 
   <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     const buttons = document.querySelectorAll('nav button');
     const sections = document.querySelectorAll('main section');
 
