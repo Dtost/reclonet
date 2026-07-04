@@ -1,15 +1,12 @@
 # ReClonet Docs
 
-Статический сайт с пользовательским соглашением, политикой конфиденциальности и FAQ для ReClonet.
+Публичный статический сайт для приложения ReClonet и сервиса VPN.
 
-- Бот: https://t.me/reclonet_bot
-- Поддержка: https://t.me/reclonetSup_bot
-- Сайт документов: `index.html`
+- Сайт: https://reclonet.link/
+- Политика: https://reclonet.link/#privacy
+- Удаление аккаунта: https://reclonet.link/#deletion
+- Соглашение: https://reclonet.link/#terms
+- Email: support@reclonet.link
+- Telegram: https://t.me/reclonetSup_bot
 
-Документы обновлены с учётом:
-
-- тарифов по сроку и по объёму трафика;
-- автопродления с внутреннего баланса;
-- покупки дополнительного трафика для существующего ключа;
-- подарочных ключей;
-- подарочных промокодов.
+Документы описывают фактические функции Android, Windows и Linux-клиентов: app-сессию, привязку Telegram, подписки, платежи, уведомления, FCM и раздельное туннелирование.
