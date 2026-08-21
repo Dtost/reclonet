@@ -1,0 +1,4 @@
+Windows and Android icons are from Font Awesome Free 7.3.1.
+Icons: CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+Source: https://fontawesome.com/
+License: https://fontawesome.com/license/free

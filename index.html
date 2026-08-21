@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#171a1f">
-  <title>ReClonet — документы, конфиденциальность и поддержка</title>
-  <meta name="description" content="Официальные документы приложения ReClonet: пользовательское соглашение, политика конфиденциальности, удаление аккаунта и ответы на вопросы.">
+  <title>ReClonet — VPN для Windows и Android</title>
+  <meta name="description" content="Официальный сайт ReClonet. Скачайте VPN-приложение для Windows и Android, ознакомьтесь с документами и обратитесь в поддержку.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://reclonet.link/">
   <link rel="icon" href="assets/reclonet-icon.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="ReClonet">
+  <meta property="og:title" content="ReClonet — VPN для Windows и Android">
+  <meta property="og:description" content="Официальный сайт ReClonet: загрузка приложения, документы и поддержка.">
+  <meta property="og:url" content="https://reclonet.link/">
+  <meta property="og:image" content="https://reclonet.link/assets/reclonet-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ReClonet — VPN для Windows и Android">
+  <meta name="twitter:description" content="Официальный сайт ReClonet: загрузка приложения, документы и поддержка.">
+  <meta name="twitter:image" content="https://reclonet.link/assets/reclonet-icon.png">
   <style>
     :root {
       --page: #121417;
@@ -275,6 +288,17 @@
       background: var(--accent);
     }
 
+    .download-action .button {
+      gap: 9px;
+    }
+
+    .platform-icon {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      display: block;
+    }
+
     .document {
       max-width: 860px;
     }
@@ -467,15 +491,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "ReClonet",
-    "applicationCategory": "SecurityApplication",
-    "operatingSystem": "Android, Windows, Linux",
-    "author": {
-      "@type": "Person",
-      "name": "DToster"
-    },
-    "url": "https://reclonet.link/"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://reclonet.link/#website",
+        "url": "https://reclonet.link/",
+        "name": "ReClonet",
+        "inLanguage": "ru"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://reclonet.link/#application",
+        "name": "ReClonet",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Android, Windows, Linux",
+        "author": {
+          "@type": "Person",
+          "name": "DToster"
+        },
+        "url": "https://reclonet.link/",
+        "image": "https://reclonet.link/assets/reclonet-icon.png",
+        "downloadUrl": [
+          "https://windows.reclonet.link",
+          "https://android.reclonet.link"
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -511,11 +552,11 @@
 
         <div class="actions">
           <div class="download-action">
-            <a class="button primary" href="https://windows.reclonet.link">Скачать для Windows</a>
+            <a class="button primary" href="https://windows.reclonet.link"><img class="platform-icon" src="assets/windows.svg" alt="" width="19" height="19">Скачать для Windows</a>
             <a class="virustotal-link" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">Проверить на VirusTotal</a>
           </div>
           <div class="download-action">
-            <a class="button primary" href="https://android.reclonet.link">Скачать для Android</a>
+            <a class="button primary" href="https://android.reclonet.link"><img class="platform-icon" src="assets/android.svg" alt="" width="19" height="19">Скачать для Android</a>
             <a class="virustotal-link" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">Проверить на VirusTotal</a>
           </div>
           <a class="button" href="https://t.me/reclonet_bot" target="_blank" rel="noreferrer">Бот в Telegram</a>
